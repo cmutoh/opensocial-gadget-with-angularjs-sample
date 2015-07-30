@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+	<ModulePrefs title="opensocal angular sample" height="400" scrolling="true" >
+		<Require feature="dynamic-height"/>
+	</ModulePrefs>
+	<Content type="html">
+	
+	<![CDATA[
+<head>
+	<script src="__IS_GADGET_BASE_URL__/vendors/angular.js"></script>
+</head>
+<body>
+	<div>
+		<div id="main" ng-controller="MainController">
+			<div ng-show="page == 'page1'" oa-adjust-height="page1">
+				<h3>Page 1</h3>
+				<div>{{fetchedData1}}</div>
+				<br>
+				<button ng-click="showPage2()">Next</button>
+			</div>
+			<div ng-show="page == 'page2'" oa-adjust-height="page2">
+				<h3>Page 2</h3>
+				<div>{{fetchedData2}}</div>
+				<br>
+				<button ng-click="showPage3()">Next</button>
+			</div>
+			<div ng-show="page == 'page3'" oa-adjust-height="page3">
+				<h3>Page 3</h3>
+				<div>{{fetchedData3}}</div>
+				<br>
+				<button ng-click="showPage1()">Go back to page 1</button>
+			</div>
+		</div>
+	</div>
+
+<script src="__IS_GADGET_BASE_URL__/js/app.js"></script>
+<script src="__IS_GADGET_BASE_URL__/js/services.js"></script>
+<script src="__IS_GADGET_BASE_URL__/js/controllers.js"></script>
+<script src="__IS_GADGET_BASE_URL__/js/directives.js"></script>
+<script>
+	gadgets.util.registerOnLoadHandler(init);
+</script>
+</body>
+
+	]]>
+	</Content> 
+</Module>
